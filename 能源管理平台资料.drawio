@@ -1,9 +1,68 @@
 <mxfile host="app.diagrams.net">
   <diagram name="第 1 页" id="9HOFSX4iJota6IYKuWXC">
-    <mxGraphModel dx="1272" dy="634" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1567" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-3" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;" value="数据采集与处理层&#xa;Python脚本" vertex="1">
+          <mxGeometry height="432" width="329" x="85" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-4" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="现场设备层" vertex="1">
+          <mxGeometry height="256" width="263" x="132" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-5" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="智能电表&#xa;Modbus-RTU协议" vertex="1">
+          <mxGeometry height="78" width="179" x="174" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-6" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="RS485转USB转换器" vertex="1">
+          <mxGeometry height="54" width="193" x="167" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-7" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="采集脚本&#xa;读取Modbus寄存器" vertex="1">
+          <mxGeometry height="78" width="193" x="167" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-8" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="本地数据库&#xa;SQLite" vertex="1">
+          <mxGeometry height="78" width="180" x="170" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-9" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="HTTP API服务&#xa;Flask" vertex="1">
+          <mxGeometry height="78" width="183" x="167" y="739" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-10" parent="1" style="whiteSpace=wrap;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" value="数据可视化层&#xa;前端网页" vertex="1">
+          <mxGeometry height="78" width="156" x="174" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-11" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-5" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-6" value="RS485总线">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-12" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-7" style="curved=1;startArrow=none;endArrow=block;exitX=0.35;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-8" value="存储原始数据">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="207" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-13" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-8" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-9" value="提供API接口">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-14" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-9" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.31;entryY=0;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-10" value="发送JSON数据">
+          <mxGeometry relative="1" x="0.2042" y="-33" as="geometry">
+            <mxPoint x="5" y="-28" as="offset" />
+            <Array as="points">
+              <mxPoint x="207" y="879" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-15" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-6" style="curved=1;startArrow=none;endArrow=block;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-3" value="USB连接">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3d0Bmxcv7_RusW6jq_jC-16" edge="1" parent="1" source="3d0Bmxcv7_RusW6jq_jC-3" style="curved=1;startArrow=none;endArrow=block;rounded=0;" target="3d0Bmxcv7_RusW6jq_jC-10" value="HTTP请求">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
